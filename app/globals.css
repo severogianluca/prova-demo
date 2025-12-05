@@ -1,9 +1,14 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font: sans-serif;
 }
 
  body {
@@ -30,6 +35,7 @@
 .nav a {
   color: white;
   text-decoration: none;
+  
 }
 
 .nav a:hover {
@@ -39,9 +45,37 @@
 .btn {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  border-top-right-radius: 20;
-  border-bottom-right-radius: 20;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   background-color: #ffff00;
 }
 
-/* MAIN STYLE */
+/* ------MAIN STYLE --------*/
+
+.text-yellow {
+  color: yellow;
+}
+
+/* Animazione h1 che entra da sinistra to centro*/
+.titolo h1{
+  font-size: 60px;
+  transform: translateX(-100%); /* parte fuori dallo schermo a sinistra */
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+.titolo h1.visible {
+  transform: translateX(0);
+  opacity: 1 !important;
+}
+
+/* Animazione img che entra da destra to centro*/
+.image-slide {
+  transform: translateX(100%); /* parte fuori dallo schermo a destra */
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
