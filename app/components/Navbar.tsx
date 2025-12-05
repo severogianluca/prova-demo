@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import Link from "next/link";
 
 interface NavLink {
@@ -17,9 +18,10 @@ const navlink: NavLink[] = [
 function Navbar() {
     return (
         <>
-            <div className="nav d-flex d-flex justify-content-between">
+            <div className="nav">
+                <div className=" container d-flex d-flex justify-content-between align-items-center pt-3 pb-3">
                     <div>
-                        LOGO
+                        <Image src="/logo.png" width={50} height={50} alt="XCC logo" />
                     </div>
                     <div className="d-flex gap-3">
                         {navlink.map((link) => (
@@ -33,10 +35,10 @@ function Navbar() {
                         ))}
                     </div>
                     <div>
-                        <button>Contattaci</button>
+                        <button type="button" className="btn btn-warning">Contattaci</button>
                     </div>
                 </div>
-
+            </div>
         </>
     )
 }
