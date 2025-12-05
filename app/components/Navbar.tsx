@@ -10,7 +10,8 @@ interface NavLink {
 
 const navlink: NavLink[] = [
     { href: "/homepage", label: "Home" },
-    { href: "/about", label: "Chi siamo" },
+    { href: "/cosa-facciamo", label: "Cosa Facciamo" },
+    { href: "/chi-siamo", label: "Chi Siamo" },
     { href: "/magazine", label: "Magazine" }
 ]
 
@@ -21,7 +22,15 @@ function Navbar() {
             <div className="nav">
                 <div className=" container d-flex d-flex justify-content-between align-items-center pt-3 pb-3">
                     <div>
-                        <Image src="/logo.png" width={50} height={50} alt="XCC logo" />
+
+                        <Link href="/homepage">
+                            <Image
+                                src="/logo.png"
+                                width={50}
+                                height={50}
+                                alt="XCC logo"
+                            />
+                        </Link>
                     </div>
                     <div className="d-flex gap-3">
                         {navlink.map((link) => (

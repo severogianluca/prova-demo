@@ -56,6 +56,10 @@
   color: yellow;
 }
 
+.titolo h2{
+    font-size: 50px;
+}
+
 /* Animazione h1 che entra da sinistra to centro*/
 .titolo h1{
   font-size: 60px;
@@ -78,4 +82,26 @@
 .visible {
   transform: translateX(0);
   opacity: 1;
+}
+
+p.small-text {
+  font-size: 14px;
+}
+
+.foto-tondo{
+  border-radius: 15%;
+}
+
+ul li {
+  color: white;
+  list-style: none;
+  margin-bottom: 20px;
+  
+}
+
+ul li::before {
+  content: "✔";
+  color: #ffff00;        
+  margin-right: 0.5rem;  
+  font-weight: bold;
 }

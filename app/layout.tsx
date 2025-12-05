@@ -36,7 +36,6 @@ export default function RootLayout({
           {children}
         </main>
 
-        <BootstrapScripts />
       </body>
     </html>
   );
