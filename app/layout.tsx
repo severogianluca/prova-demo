@@ -29,11 +29,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header>
+          <Navbar />
+        </header>
 
-        <Navbar/>
-        {children}
+        <main style={{ paddingTop: "80px" }}>
+          {children}
+        </main>
 
-        <BootstrapScripts/>
+        <BootstrapScripts />
       </body>
     </html>
   );
