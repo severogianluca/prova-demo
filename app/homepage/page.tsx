@@ -1,7 +1,20 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
+
+interface HoverLink {
+    href: string,
+    label: string
+}
+
+const HoverLink: HoverLink[] = [
+    { href: "/cosa-facciamo", label: "Managing Consulting →" },
+    { href: "/cosa-facciamo", label: "System Integration →" },
+    { href: "/cosa-facciamo", label: "Digital Transformation →" },
+    { href: "/cosa-facciamo", label: "User Adoption →" }
+]
 function Home() {
 
     const [visible, setVisible] = useState(false);
@@ -24,7 +37,7 @@ function Home() {
 
                 <div className="d-flex d-flex justify-content-between align-items-center gap-3 pt-5">
                     <div className="px-5">
-                        <Image src="/photo2.jpg" width={300} height={340} alt="foto di grupp" className="foto-tondo" />
+                        <Image src="/photo2.jpg" width={300} height={340} alt="foto di gruppo" className="foto-tondo" />
                     </div>
                     <div className="titolo">
                         <p style={{ color: "#b3b3b3" }}>CHI SIAMO</p>
@@ -37,14 +50,31 @@ function Home() {
                             <li>Innovazione</li>
                         </ul>
 
-                        <button type="button" className="btn btn-warning px-4 py-2 mt-3">Scopri di più</button>
+                        <button type="button" className="btn btn-warning px-4 py-2 mt-3 mb-5">Scopri di più</button>
                     </div>
                 </div>
 
-                <div className="titolo">
-                    <p style={{ color: "#b3b3b3" }}>COSA FACCIAMO</p>
-                    <h2 className="pb-5">Cosa possiamo fare per  <span className="text-yellow">la tua azienda</span></h2>
+
+                <div className="d-flex d-flex justify-content-between align-items-center gap-3 pt-5 mt-5">
+                    <div className="titolo">
+                        <p style={{ color: "#b3b3b3" }}>COSA FACCIAMO</p>
+                        <h2 className="pb-5">Cosa possiamo fare per  <span className="text-yellow">la tua azienda</span></h2>
+                        <div className="d-flex justify-content-center w-100 mt-3">
+                            <Image src="/photo3.png" width={300} height={300} alt="foto puzzle"></Image>
+                        </div>
+                    </div>
+                    <div className="ps-5">
+                        {HoverLink.map((link, index) => (
+                            <Link
+                                key={index}
+                                href={link.href}
+                            >
+                                <h2 className="p-3">{link.label}</h2>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
+                
 
             </div>
 
