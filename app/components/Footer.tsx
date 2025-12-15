@@ -9,35 +9,40 @@ export default function Footer() {
     return (
         <>
             <div className="container">
-                <div className="d-flex d-flex justify-content-between align-items-center gap-3 pt-5 mt-5 mb-5">
+                <div className="d-flex justify-content-between align-items-start gap-4 pt-5 mt-5 mb-5">
+
                     <div>
                         <Link href="/homepage">
-                            <Image
-                                src="/logo.png"
-                                width={70}
-                                height={70}
-                                alt="XCC logo"
-                            />
+                            <Image src="/logo.png" width={70} height={70} alt="XCC logo" />
                         </Link>
                     </div>
 
                     <div>
-                        <p>EXPERIENCE CLOUD CONSULTING SRL</p>
-                        <p>P.IVA 15159081007 | xcconsulting.it | © 2023</p>
+                        <p className="mb-1">EXPERIENCE CLOUD CONSULTING SRL</p>
+                        <p className="mb-0">P.IVA 15159081007 | xcconsulting.it | © 2023</p>
                     </div>
+
                     <div>
-                        <p>SEDE LEGALE</p>
-                        <p>Via del Commercio, 36
-                            00154 Roma
-                            RM, Italia</p>
+                        <p className="mb-1 fw-bold">SEDE LEGALE</p>
+                        <p className="mb-0">
+                            Via del Commercio, 36<br />
+                            00154 Roma (RM), Italia
+                        </p>
                     </div>
+
                     <div>
-                        <p>PRIVACY ED ETICA</p>
-                        <Link href="/codice-etico" className="footer-link">Codice etico</Link>
-                        <p>Privacy policY</p>
+                        <p className="mb-1 fw-bold">PRIVACY ED ETICA</p>
+                        <Link href="/codice-etico" className="footer-link d-block">
+                            Codice etico
+                        </Link>
+                        <Link href="#" className="footer-link d-block">
+                            Privacy policy
+                        </Link>
                     </div>
+
                 </div>
             </div>
+
             <hr />
 
             <div className="container">
