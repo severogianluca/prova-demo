@@ -50,7 +50,7 @@
   background-color: #ffff00;
 }
 
-/* ------MAIN STYLE --------*/
+/* ------MAIN STYLE HOMEPAGE--------*/
 
 .text-yellow {
   color: yellow;
@@ -120,4 +120,22 @@ a :hover {
   background-color: #ffff00;   
   color: black;           
   transition: background-color 0.65s ease, color 0.65s ease;
+}
+
+
+
+/* ----- MAIN STYLE CHI SIAMO------ */
+
+.titolo-chi-siamo h1{
+    font-size: 80px;
+
+}
+
+.no-border{
+  border-radius: 50px;
+}
+
+.volontariato-img {
+  float: right;
+  margin: 0 0 20px 40px;
 }

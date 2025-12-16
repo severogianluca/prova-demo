@@ -8,7 +8,7 @@ import { FaYoutube, FaLinkedin, FaArrowUp } from "react-icons/fa";
 export default function Footer() {
     return (
         <>
-            <div className="container">
+            <div className="container pt-5 mt-5">
                 <div className="d-flex justify-content-between align-items-start gap-4 pt-5 mt-5 mb-5">
 
                     <div>

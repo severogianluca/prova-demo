@@ -85,7 +85,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div>
+                <div className="pb-5">
                     <h1 className="text-yellow pt-5 mt-5">News</h1>
 
                     <div
